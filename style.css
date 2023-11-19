@@ -1,0 +1,96 @@
+/*Global custom*/
+
+*{padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;}
+
+
+body{ 
+        height: 100vh;
+        width: 100vw;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-image: url('https://images.unsplash.com/photo-1495312040802-a929cd14a6ab?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTcwMDI2ODkwMA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
+
+/*------------------------------------------------------------------*/
+}
+
+/*Custom search camp on city*/
+#larger_box{
+	background: #000000;
+	opacity: 0.8;
+	border-radius: 25px;
+    padding: 25px;
+    width: 95%;
+    max-width: 450px;
+}
+
+#write_city{
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	padding:10px ;
+	font-size: 20px;
+    background-color: #7c7c7c2b;
+    color: #ffffff;
+    width: calc(100% - 100px);
+}
+
+.btn_search{
+    border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 55px;
+	padding: 10px;
+	background-color: #7c7c7c2b;
+	float: right;
+}
+
+#search_city{
+	width: 20px;
+	display: flex;
+	align-items: center;
+
+}
+
+/*Custom answers from API of cyty requered*/
+/*-----------------------------------------------------*/
+#medium_box{
+	margin-top: 25px;
+}
+
+#city{
+	color: #ffffff;
+	font-size: 28px;
+	font-weight: 300;
+}
+
+#temp{
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: -10px;
+}
+/*-----------------------------------------------------*/
+#small_box{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+#umid{
+	font-size: 20px;
+	margin-top: 15px;
+	color: #ffffff;
+    
+}
+
+#text_forecast{
+	font-weight: bold;
+	margin-left: 20px;
+	text-transform: capitalize;
+	color: #ffffff;
+}
