@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Forecast-Weather</title>
+   
+    <!--Pag CSC/JS-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="app.js"></script>
+	
+	<!--API font-family-->	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <div id="larger_box">
+   <!--input search name from city-->	
+   	<div id="camp_search" >
+   		<input id="write_city" type="text" placeholder="Digite sua cidade:">
+   		<button class="btn_search" onclick="writeCity()" ><img id="search_city" alt="busca"src="https://www.svgrepo.com/show/488200/find.svg"></button>
+   	</div>
+   <!--The Result temp on City-->
+   	<div id="medium_box">
+   		<h2 id="city">  Tempo em </h2>
+   			<p id="temp">21°C</p>
+       </div>     
+   
+   <!--Result of the clouds and humidity in the city--> 
+    <div id="small_box">
+    	<img id="img_cloud" alt="icone-temp" src="https://openweathermap.org/img/wn/04n.png">
+    	<p id="text_forecast">Nublado</p>
+     </div>
+    <div>
+       <p id="umid">Umidade: 76%</p>
+     </div>
+  </div>
+  <script >
+
+   //Return dados Api- open_weather_map
+   function putDatasOnScreen (dados) {
+      document.getElementById('city').innerHTML = 'Tempo em:' + ' ' + dados.name 
+   document.getElementById('temp').innerHTML = Math.floor(dados.main.temp) + "°C"
+   document.getElementById('text_forecast').innerHTML = dados.weather[0].description
+   document.getElementById('img_cloud').src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
+     document.getElementById('umid').innerHTML =  'Umidade: ' + ' '+ dados.main.humidity + '%'  
+ }
+  </script>
+
+</body>
+</html>
